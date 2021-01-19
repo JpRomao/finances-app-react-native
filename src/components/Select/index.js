@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {Text, View} from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 
-import Images from '../Images';
 import Input from '../Input';
 
 export default function Select() {
@@ -70,10 +69,8 @@ export default function Select() {
           placeholder={placeholder}
         />
       </View>
-      <View style={styles.inputBlock}>
-        <Images selectValue={selectValue} />
-        <Input />
-      </View>
+
+      <Input selectValue={selectValue} />
     </>
   );
 }
@@ -93,8 +90,5 @@ const styles = {
   },
   text: {
     fontSize: 23,
-  },
-  inputBlock: {
-    flexDirection: 'row',
   },
 };

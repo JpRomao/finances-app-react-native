@@ -1,15 +1,18 @@
 import React from 'react';
 import {TouchableOpacity, Text} from 'react-native';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Button({transactionValue}) {
-  function handleAddTransaction() {}
+  async function handleAddTransaction() {
+    const item = await AsyncStorage.setItem('');
+  }
 
   return (
     <>
       <TouchableOpacity
         style={styles.button}
-        activeOpacity={0.6}
-        onPress={() => console.log('oi')}>
+        onPress={handleAddTransaction}
+        activeOpacity={0.6}>
         <Text style={styles.text}>Lançar transação</Text>
       </TouchableOpacity>
     </>

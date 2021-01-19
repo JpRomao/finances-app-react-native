@@ -5,7 +5,7 @@ import incomeIcon from '../../assets/icons/incomeIcon.png';
 import outcomeIcon from '../../assets/icons/outcomeIcon.png';
 
 export default function Images({selectValue}) {
-  const icon = selectValue == 'outcome' ? outcomeIcon : incomeIcon;
+  const icon = selectValue === 'outcome' ? outcomeIcon : incomeIcon;
   return <Image source={icon} style={styles.image} />;
 }
 
